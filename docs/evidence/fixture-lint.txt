@@ -1,0 +1,14 @@
+$ npm run lint
+
+> pinboard-fixture@0.1.0 lint
+> eslint . --max-warnings 0
+
+
+fixture/lib/analytics.ts
+  1:42  warning  'boardId' is defined but never used                @typescript-eslint/no-unused-vars
+  2:9   warning  'sessionStart' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+✖ 2 problems (0 errors, 2 warnings)
+
+ESLint found too many warnings (maximum: 0).
+[exit code 1, expected non-zero: planted unused vars]

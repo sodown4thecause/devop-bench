@@ -1,0 +1,27 @@
+$ TZ=UTC npm test
+   × debounce > fires once after the wait 58ms
+     → expected +0 to be 1 // Object.is equality
+   ✓ pricing > charges the monthly list price for monthly billing 1ms
+   × pricing > annual billing is 2 months free (12 months for the price of 10) 10ms
+     → expected 18240 to be 19000 // Object.is equality
+   ✓ pricing > free stays free 0ms
+   × schema > every pins column the repo filters on exists in a migration 8ms
+     → column pins.archived_at missing from migrations: expected 'CREATE TABLE boards (\n  id          …' to match /\barchived_at\b/
+   ✓ listBoardsWithPins > returns every board with its pins 3ms
+   × listBoardsWithPins > uses a constant number of queries regardless of board count 6ms
+     → expected 26 to be less than or equal to 2
+ ✓ tests/dates.test.ts (1 test) 4ms
+ ✓ tests/region.test.ts (1 test) 4ms
+ ↓ tests/admin-auth.test.ts (1 test | 1 skipped)
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+ FAIL  tests/debounce.test.ts > debounce > fires once after the wait
+AssertionError: expected +0 to be 1 // Object.is equality
+ FAIL  tests/migrations.test.ts > schema > every pins column the repo filters on exists in a migration
+AssertionError: column pins.archived_at missing from migrations: expected 'CREATE TABLE boards (\n  id          …' to match /\barchived_at\b/
+ FAIL  tests/pricing.test.ts > pricing > annual billing is 2 months free (12 months for the price of 10)
+AssertionError: expected 18240 to be 19000 // Object.is equality
+ FAIL  tests/repo.test.ts > listBoardsWithPins > uses a constant number of queries regardless of board count
+AssertionError: expected 26 to be less than or equal to 2
+ Test Files  4 failed | 2 passed | 1 skipped (7)
+      Tests  4 failed | 5 passed | 1 skipped (10)
+[exit code 1, expected non-zero: planted failures]

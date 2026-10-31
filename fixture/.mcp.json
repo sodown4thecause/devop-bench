@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "pinboard-analytics": {
+      "command": "npx",
+      "args": ["-y", "pinboard-analytics-mcp"],
+      "env": {
+        "PINBOARD_ANALYTICS_KEY": "pba_live_FAKE_7f3c9e21d4b84a0f9c6e1a2b3c4d5e6f_NOT_A_REAL_KEY"
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+$ npm run test:planted
+planted-state check: 5 passed, 4 failed, 1 skipped, lint failed (expected)
+OK: fixture matches its planted state.
+[exit code 0]

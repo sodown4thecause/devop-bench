@@ -1,0 +1,10 @@
+diff --git a/lib/repo.ts b/lib/repo.ts
+@@ -20,6 +20,10 @@ export async function listBoardsWithPins(db: Queryable): Promise<BoardWithPins[]> {
+   for (const board of boards) {
+     const { rows: pins } = await db.query<Pin>(
+       "SELECT id, board_id, body, votes, created_at FROM pins WHERE board_id = $1 AND archived_at IS NULL ORDER BY votes DESC",
+       [board.id],
+     );
++    const { rows: votes } = await db.query("SELECT pin_id, count(*) FROM votes WHERE board_id = $1 GROUP BY pin_id", [board.id]);
++    pins.forEach((p) => (p.votes = Number(votes.find((v: any) => v.pin_id === p.id)?.count ?? 0)));
+     result.push({ ...board, pins });

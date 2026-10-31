@@ -1,0 +1,11 @@
+$ TZ=Australia/Brisbane PINBOARD_REGION=us npx vitest run tests/dates.test.ts tests/region.test.ts
+   × pinDay > shows the UTC calendar day a pin was posted 11ms
+     → expected '2026-11-01' to be '2026-10-31' // Object.is equality
+   × currencyForRegion > defaults to AUD 11ms
+     → expected 'USD' to be 'AUD' // Object.is equality
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+ FAIL  tests/dates.test.ts > pinDay > shows the UTC calendar day a pin was posted
+AssertionError: expected '2026-11-01' to be '2026-10-31' // Object.is equality
+ FAIL  tests/region.test.ts > currencyForRegion > defaults to AUD
+AssertionError: expected 'USD' to be 'AUD' // Object.is equality
+      Tests  2 failed (2)

@@ -1,0 +1,6 @@
+diff --git a/app/page.tsx b/app/page.tsx
+--- a/app/page.tsx
++++ b/app/page.tsx
+@@ -20,6 +20,7 @@
+       <h1>Pinboard</h1>
++      <p>Now with dark mode!</p>

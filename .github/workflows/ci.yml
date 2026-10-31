@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  fixture:
+    name: Fixture builds and is in its planted state
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: fixture
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: fixture/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build
+      # Some tests and lint FAIL on purpose. This script passes only when exactly
+      # the planted failures happen, so CI stays green while the fixture stays buggy.
+      - run: npm run test:planted
+
+  harness:
+    name: Harness typechecks and discovers every task
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: harness
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: harness/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npx eve eval --list

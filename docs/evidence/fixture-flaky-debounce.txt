@@ -1,0 +1,2 @@
+$ for i in 1..12: npx vitest run tests/debounce.test.ts
+debounce: 8 pass, 4 fail of 12

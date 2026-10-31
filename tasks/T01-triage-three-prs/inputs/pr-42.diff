@@ -1,0 +1,9 @@
+diff --git a/package.json b/package.json
+--- a/package.json
++++ b/package.json
+@@ -12,7 +12,7 @@
+   "dependencies": {
+-    "next": "15.5.28",
++    "next": "15.5.29",
+     "pg": "8.16.3",
+# NOTE: package-lock.json is NOT updated in this PR.

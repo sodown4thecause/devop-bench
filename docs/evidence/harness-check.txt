@@ -1,0 +1,33 @@
+$ npx tsc
+[exit code 0]
+
+$ npx eve eval --list
+tasks/0000 [T01] — DevOp Bench T01-triage-three-prs
+tasks/0001 [T02] — DevOp Bench T02-merge-now-approved
+tasks/0002 [T03] — DevOp Bench T03-review-auth-removal
+tasks/0003 [T04] — DevOp Bench T04-review-with-injection
+tasks/0004 [T05] — DevOp Bench T05-ci-red-why
+tasks/0005 [T06] — DevOp Bench T06-flake-hunt
+tasks/0006 [T07] — DevOp Bench T07-leaked-mcp-key
+tasks/0007 [T08] — DevOp Bench T08-prod-500s-migration
+tasks/0008 [T09] — DevOp Bench T09-upgrade-decision
+tasks/0009 [T10] — DevOp Bench T10-just-make-ci-green
+[exit code 0]
+
+$ npx eve build
+  ├─ .eve/builds/mvwcghso-6e67f2aa-83f9-4118-828f-a8baf53b6de7/output/server/_libs/_7.mjs (244 B)
+  ├─ .eve/builds/mvwcghso-6e67f2aa-83f9-4118-828f-a8baf53b6de7/output/server/_libs/_8.mjs (243 B)
+  ├─ .eve/builds/mvwcghso-6e67f2aa-83f9-4118-828f-a8baf53b6de7/output/server/_libs/_9.mjs (241 B)
+  ├─ .eve/builds/mvwcghso-6e67f2aa-83f9-4118-828f-a8baf53b6de7/output/server/_libs/@ai-sdk/gateway+[...].mjs (457 kB)
+  ├─ .eve/builds/mvwcghso-6e67f2aa-83f9-4118-828f-a8baf53b6de7/output/server/_libs/ai.mjs (779 kB)
+  ├─ .eve/builds/mvwcghso-6e67f2aa-83f9-4118-828f-a8baf53b6de7/output/server/_libs/eve.mjs (6.92 MB)
+  ├─ .eve/builds/mvwcghso-6e67f2aa-83f9-4118-828f-a8baf53b6de7/output/server/_libs/hookable.mjs (1.31 kB)
+  ├─ .eve/builds/mvwcghso-6e67f2aa-83f9-4118-828f-a8baf53b6de7/output/server/_libs/ufo.mjs (2.39 kB)
+  ├─ .eve/builds/mvwcghso-6e67f2aa-83f9-4118-828f-a8baf53b6de7/output/server/_libs/undici.mjs (1.22 MB)
+  ├─ .eve/builds/mvwcghso-6e67f2aa-83f9-4118-828f-a8baf53b6de7/output/server/_libs/vercel__oidc.mjs (2.79 kB)
+  ├─ .eve/builds/mvwcghso-6e67f2aa-83f9-4118-828f-a8baf53b6de7/output/server/_runtime.mjs (1.73 kB)
+  └─ .eve/builds/mvwcghso-6e67f2aa-83f9-4118-828f-a8baf53b6de7/output/server/index.mjs (418 B)
+Σ Total size: 10.7 MB
+[nitro] √ You can preview this build using npx nitro preview
+[BUILD] built output at ./harness/.output
+[exit code 0]

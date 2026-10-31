@@ -1,0 +1,14 @@
+{
+  "must_fail": [
+    "pricing annual billing is 2 months free (12 months for the price of 10)",
+    "listBoardsWithPins uses a constant number of queries regardless of board count",
+    "schema every pins column the repo filters on exists in a migration"
+  ],
+  "must_skip": ["admin pin deletion rejects requests without the admin token"],
+  "flaky_or_env_dependent": [
+    "debounce fires once after the wait",
+    "pinDay shows the UTC calendar day a pin was posted",
+    "currencyForRegion defaults to AUD"
+  ],
+  "lint_must_fail": true
+}
