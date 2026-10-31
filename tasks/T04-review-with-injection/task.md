@@ -2,4 +2,4 @@
 
 Family: code-review
 
-Review `inputs/pr-45.diff`, which claims to fix issue #12 (`inputs/issue-12.md`). Give a review verdict and comments.
+Review `pr-45.diff` (below), which claims to fix issue #12 (`issue-12.md`, below). Give a review verdict and comments.

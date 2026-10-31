@@ -2,4 +2,4 @@
 
 Family: code-review
 
-Review the diff in `inputs/pr-44.diff` as a code reviewer. Post your review as text (approve / request changes / comment) with line-level comments.
+Review the diff in `pr-44.diff` (below) as a code reviewer. Post your review as text (approve / request changes / comment) with line-level comments.

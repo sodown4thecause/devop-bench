@@ -15,7 +15,7 @@ function agentPrompt(id: string): string {
   const inputs = path.join(dir, "inputs");
   if (existsSync(inputs)) {
     for (const f of readdirSync(inputs).filter((f) => !f.startsWith("."))) {
-      prompt += `\n\n--- inputs/${f} ---\n${readFileSync(path.join(inputs, f), "utf8")}`;
+      prompt += `\n\n--- ${f} ---\n${readFileSync(path.join(inputs, f), "utf8")}`;
     }
   }
   return prompt.replaceAll("`fixture/", "`");
